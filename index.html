@@ -53,7 +53,7 @@
               daydream-controls="left" gearvr-controls="left"
               mixin="controller">
             </a-entity>
-            <a-entity teleport-controls="cameraRig: #cameraRig; type: line; button: trackpad;"
+            <a-entity teleport-controls="cameraRig: #cameraRig; type: arc; button: trackpad;"
               vive-controls="hand: right"
               microsoft-motion-controls="hand: right"
               oculus-touch-controls="hand: right"
@@ -72,7 +72,7 @@
         <a-entity mixin="ball" position="0.25 1.1 -1" material="color: red"
         collision-filter="group: red; collidesWith: default, hands, grey, red, Can">
         </a-entity>
-        <a-entity mixin="ball" position="-0.25 1.1 -1" material="color: red"
+        <a-entity mixin="ball" position="-0.25 1.1 -1" material="color: red" 
         collision-filter="group: red; collidesWith: default, hands, grey, red, Can">
         </a-entity>
 
@@ -80,26 +80,26 @@
         collision-filter="group: grey; collidesWith: default, hands, red, Can"></a-entity>
 
         <!--can tower bottom row-->
-        <a-entity mixin="can" position="2 1.01 0"
+        <a-entity mixin="can" position="2 1.001 0" 
         collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
-        <a-entity mixin="can" position="2 1.01 0.16"
+        <a-entity mixin="can" position="2 1.001 0.16"
         collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
-        <a-entity mixin="can" position="2 1.01 0.32"
+        <a-entity mixin="can" position="2 1.001 0.32"
         collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
-        <a-entity mixin="can" position="2 1.01 -0.16"
+        <a-entity mixin="can" position="2 1.001 -0.16"
         collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
-        <a-entity mixin="can" position="2 1.01 -0.32"
+        <a-entity mixin="can" position="2 1.001 -0.32"
         collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
 
-        <!--can tower second row-->
-        <a-entity mixin="can" position="2 1.21 0.08"
-        collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
-        <a-entity mixin="can" position="2 1.21 0.24"
-        collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
-        <a-entity mixin="can" position="2 1.21 -0.08"
-        collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
-        <a-entity mixin="can" position="2 1.21 -0.24"
-        collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
+                <!--can tower 2nd row-->
+                <a-entity mixin="can" position="2 1.212 0.08"
+                collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
+                <a-entity mixin="can" position="2 1.212 -0.08"
+                collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
+                <a-entity mixin="can" position="2 1.212 0.24"
+                collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
+                <a-entity mixin="can" position="2 1.212 -0.24"
+                collision-filter="group: Can; collidesWith: default, hands, red, Can, grey"></a-entity>
 
         <!--can tower bottom-->
         <a-entity mixin="canholdr" position="2 1 0" color="grey"
