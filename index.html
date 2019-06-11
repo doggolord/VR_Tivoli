@@ -29,12 +29,12 @@
                                          collisionForces: false">
             </a-mixin>
             <a-mixin id="ball" dynamic-body grabbable
-                geometry="primitive: sphere; radius: 0.05; weight: 1;">
+                geometry="primitive: sphere; radius: 0.08; weight: 1;">
             </a-mixin>
             <a-mixin id="ballholdr" static-body 
             geometry="primitive: box; width: 1; height: 0.1; depth: 0.5">
             </a-mixin>
-            <a-mixin id="can" dynamic-body weight="default"
+            <a-mixin id="can" dynamic-body weight="0.5"
             geometry="primitive: cylinder; height:0.2; radius:0.07;">
             </a-mixin>
             <a-mixin id="canholdr" static-body 
@@ -66,17 +66,17 @@
           <a-entity hand-controls="right" mixin="controller"></a-entity>
            -->
         <!--Balls-->
-        <a-entity mixin="ball" position="0 1.1 -1" material="color: red"
+        <a-entity mixin="ball" position="0 1.1 -0.5" material="color: red"
         collision-filter="group: red; collidesWith: default, hands, grey, red, Can">
         </a-entity>
-        <a-entity mixin="ball" position="0.25 1.1 -1" material="color: red"
+        <a-entity mixin="ball" position="0.25 1.1 -0.5" material="color: red"
         collision-filter="group: red; collidesWith: default, hands, grey, red, Can">
         </a-entity>
-        <a-entity mixin="ball" position="-0.25 1.1 -1" material="color: red" 
+        <a-entity mixin="ball" position="-0.25 1.1 -0.5" material="color: red" 
         collision-filter="group: red; collidesWith: default, hands, grey, red, Can">
         </a-entity>
 
-        <a-entity mixin="ballholdr" position="0 1 -1" color="grey" width="1" height="0.1" depth="1"
+        <a-entity mixin="ballholdr" position="0 1 -0.5" color="grey" width="1" height="0.1" depth="1"
         collision-filter="group: grey; collidesWith: default, hands, red, Can"></a-entity>
 
         <!--can tower bottom row-->
@@ -105,7 +105,8 @@
         <a-entity mixin="canholdr" position="2 1 0" color="grey"
         collision-filter="group: grey; collidesWith: default, hands, red, Can"></a-entity>
 
-        <a-plane static-body rotation="-90 0 0" width="10" height="10" color="black"></a-plane>
+        <a-plane static-body rotation="-90 0 0" width="10" height="10" color="black"
+        collision-filter="group: grey; collidesWith: default, hands, red, Can"></a-plane>
         <a-sky color="grey"></a-sky>
     </a-scene>
   </body>
